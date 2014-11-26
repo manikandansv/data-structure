@@ -6,6 +6,11 @@ public class ListNode {
 	
 	private ListNode next;
 
+	public ListNode(Object object) {
+		this.data = object;
+		this.next = null;
+	}
+
 	public Object getData() {
 		return data;
 	}
