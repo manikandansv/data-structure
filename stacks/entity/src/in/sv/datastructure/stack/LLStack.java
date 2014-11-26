@@ -12,7 +12,7 @@ public class LLStack {
 		this.headNode = new ListNode(null);
 	}
 	
-	public void push(int data){
+	public void push(Object data){
 		if (headNode == null){
 			headNode= new ListNode(data); 
 		}
