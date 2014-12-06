@@ -4,6 +4,12 @@ import in.sv.datastructure.linkedlist.ListNode;
 
 public class SingleLinkedList {
 
+	/**
+	 * Time Complexity : 
+	 * Space Complexity: 
+	 * @param node
+	 * @return
+	 */
 	public int sllLength(ListNode node){
 		int count = 0;
 		if (node != null){
@@ -16,6 +22,14 @@ public class SingleLinkedList {
 		return count;
 	}
 	
+	/**
+	 * Time Complexity:
+	 * Space Complexity:
+	 * @param head
+	 * @param nodeToInsert
+	 * @param position
+	 * @return
+	 */
 	public ListNode insertInSLL(ListNode head, ListNode nodeToInsert, int position){
 		
 		if (head == null)
@@ -42,6 +56,13 @@ public class SingleLinkedList {
 		}
 	}
 	
+	/**
+	 * Time Complexity:
+	 * Space Complexity:
+	 * @param head
+	 * @param position
+	 * @return
+	 */
 	public ListNode deleteInSLL(ListNode head, int position){
 		
 		int length = this.sllLength(head);
@@ -68,6 +89,13 @@ public class SingleLinkedList {
 		return head;		
 	}
 	
+	/**
+	 * Time Complexity:
+	 * Space Complexity:
+	 * @param head
+	 * @param position
+	 * @return
+	 */
 	public ListNode getSLLNode(ListNode head, int position){
 		
 		if (head == null)return null;

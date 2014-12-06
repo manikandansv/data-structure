@@ -4,6 +4,11 @@ import in.sv.datastructure.linkedlist.ListNode;
 
 public class CircularLinkedList {
 
+	/**
+	 * 
+	 * @param headNode
+	 * @return
+	 */
 	public Integer getCLLListLength(ListNode headNode) {
 
 		int length = 0;
@@ -23,6 +28,13 @@ public class CircularLinkedList {
 		return length;
 	}
 
+	/**
+	 * 
+	 * @param headNode
+	 * @param nodeToInsert
+	 * @param position
+	 * @return
+	 */
 	public ListNode insertCLLNode(ListNode headNode, ListNode nodeToInsert,
 			int position) {
 		if (headNode == null) {
@@ -48,6 +60,12 @@ public class CircularLinkedList {
 		return headNode;
 	}
 
+	/**
+	 * 
+	 * @param headNode
+	 * @param position
+	 * @return
+	 */
 	public ListNode deleteCLLNode(ListNode headNode, int position) {
 
 		if (headNode == null) {
@@ -78,6 +96,12 @@ public class CircularLinkedList {
 
 	}
 
+	/**
+	 * 
+	 * @param headNode
+	 * @param position
+	 * @return
+	 */
 	public ListNode getNode(ListNode headNode, int position) {
 
 		if (headNode == null)
