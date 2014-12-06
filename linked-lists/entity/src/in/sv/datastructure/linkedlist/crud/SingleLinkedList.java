@@ -68,4 +68,20 @@ public class SingleLinkedList {
 		return head;		
 	}
 	
+	public ListNode getSLLNode(ListNode head, int position){
+		
+		if (head == null)return null;
+		
+		int count = 0;
+		
+		ListNode node = head;
+		
+		while (count < position){
+			count++;
+			node = head.getNext();
+		}
+		return node;
+		
+	}
+	
 }
