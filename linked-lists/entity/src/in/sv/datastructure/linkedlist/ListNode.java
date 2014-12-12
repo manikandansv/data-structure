@@ -1,6 +1,8 @@
 package in.sv.datastructure.linkedlist;
 
 public class ListNode {
+	
+	private Long id;
 
 	private Object data;
 	
@@ -25,6 +27,14 @@ public class ListNode {
 
 	public void setNext(ListNode next) {
 		this.next = next;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 	
 	
