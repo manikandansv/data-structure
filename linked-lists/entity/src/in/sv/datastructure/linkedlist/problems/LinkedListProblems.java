@@ -465,34 +465,35 @@ public class LinkedListProblems {
 	 * @param node2
 	 * @return
 	 */
-//	public ListNode getIntersectionNodeMethod3(ListNode node1, ListNode node2) {
-//
-//		ListNode intersectNode = null;
-//
-//		LLStack stack1 = new LLStack();
-//		LLStack stack2 = new LLStack();
-//
-//		while (node1 != null) {
-//			stack1.push(node1);
-//			node1 = node1.getNext();
-//		}
-//
-//		while (node2 != null) {
-//			stack2.push(node2);
-//			node2 = node2.getNext();
-//		}
-//
-//		while (true) {
-//			ListNode node11 = (ListNode) stack1.pop();
-//			ListNode node22 = (ListNode) stack2.pop();
-//			if (node11.getId() == node22.getId()) {
-//				intersectNode = node11;
-//			} else {
-//				break;
-//			}
-//		}
-//		return intersectNode;
-//	}
+	// public ListNode getIntersectionNodeMethod3(ListNode node1, ListNode
+	// node2) {
+	//
+	// ListNode intersectNode = null;
+	//
+	// LLStack stack1 = new LLStack();
+	// LLStack stack2 = new LLStack();
+	//
+	// while (node1 != null) {
+	// stack1.push(node1);
+	// node1 = node1.getNext();
+	// }
+	//
+	// while (node2 != null) {
+	// stack2.push(node2);
+	// node2 = node2.getNext();
+	// }
+	//
+	// while (true) {
+	// ListNode node11 = (ListNode) stack1.pop();
+	// ListNode node22 = (ListNode) stack2.pop();
+	// if (node11.getId() == node22.getId()) {
+	// intersectNode = node11;
+	// } else {
+	// break;
+	// }
+	// }
+	// return intersectNode;
+	// }
 
 	/**
 	 * Problem-21: Find the first repeating number approach in an array
@@ -508,31 +509,200 @@ public class LinkedListProblems {
 		return intersectNode;
 
 	}
-	
+
 	/**
-	 * Problem-22: 
+	 * Problem-22:
+	 * 
 	 * @param node1
 	 * @param node2
 	 * @return
 	 */
-	public ListNode getIntersectionNodeMethod5(ListNode node1, ListNode node2){
-		
+	public ListNode getIntersectionNodeMethod5(ListNode node1, ListNode node2) {
+
 		ListNode intersectNode = null;
 
 		return intersectNode;
-		
+
 	}
-	
+
 	/**
 	 * Problem-23:
+	 * 
 	 * @param node1
 	 * @param node2
 	 * @return
 	 */
-	public ListNode getIntersectionNodeMethod6(ListNode node1, ListNode node2){
+	public ListNode getIntersectionNodeMethod6(ListNode node1, ListNode node2) {
 		ListNode intersectNode = null;
 
 		return intersectNode;
 	}
 
+	/**
+	 * Problem-24
+	 * 
+	 * @param node
+	 * @return
+	 */
+	public ListNode getMiddleOfLinkedListMethod1(ListNode node) {
+
+		return null;
+	}
+
+	/**
+	 * 
+	 * @param node
+	 * @return
+	 */
+	public ListNode getMiddleOfLinkedListMethod2(ListNode node) {
+
+		return null;
+	}
+
+	/**
+	 * 
+	 * @param node
+	 * @return
+	 */
+	public ListNode getMiddleOfLinkedListMethod3(ListNode node) {
+
+		return null;
+	}
+
+	/**
+	 * Problem-27
+	 * 
+	 * @param node
+	 * @return
+	 */
+	public ListNode getMiddleOfLinkedListMethod4(ListNode node) {
+
+		return null;
+	}
+
+	/**
+	 * Problem-28
+	 * 
+	 * @param head
+	 */
+	public void printListFromEnd(ListNode head) {
+
+	}
+
+	/**
+	 * Problem-29
+	 * 
+	 * @param head
+	 * @return
+	 */
+	public boolean isListEven(ListNode head) {
+
+		return false;
+	}
+
+	/**
+	 * Problem-30
+	 * 
+	 * @param head
+	 * @return
+	 */
+	public ListNode getElementBeforeKth(ListNode head) {
+
+		return null;
+	}
+
+	/**
+	 * Problem-31
+	 * 
+	 * @param node1
+	 * @param node2
+	 * @return
+	 */
+	public ListNode mergeSortedList(ListNode node1, ListNode node2) {
+
+		return null;
+	}
+
+	/**
+	 * Problem-32
+	 * 
+	 * @param head
+	 * @return
+	 */
+	public ListNode reverseInPairs(ListNode head) {
+
+		return null;
+	}
+
+	/**
+	 * Problem-33 will be implemented in Tree chapter
+	 */
+	public void convertBinaryTreeToDLL() {
+
+	}
+
+	/**
+	 * Problem-34 will be implemented in sorting chapter
+	 */
+	public void sortLinkedList() {
+
+	}
+
+	/**
+	 * Problem-35 LinkedList concatenation - which one gives complexity O(1) SLL
+	 * DLL CLL - CLL as SLL & DLL need to traverse the first list till end &
+	 * append the second list. in CLL, we don't have to traverse
+	 */
+
+	/**
+	 * Problem-36 Split a CLL into two equal parts. If the number of nodes are
+	 * odd, then make first list one node extra than the second list
+	 * 
+	 * @param node
+	 */
+	public void splitCLL(ListNode node) {
+
+	}
+	
+	/**
+	 * Problem-37 Check if the list is palindrome
+	 * @param node
+	 * @return
+	 */
+	public boolean isPalindrome(ListNode node){
+		
+		return false;
+	}
+
+	/**
+	 * 
+	 * Problem-38 Exchange adjacement elements in link list
+	 * @param node
+	 */
+	public void exchangeAdjacentNodes(ListNode node){
+		
+	}
+	
+	
+	/**
+	 * 
+	 * Problem-39 Reverse block of K nodes
+	 * @param node
+	 * @param K
+	 */
+	public void reverseBlockOfKNodes(ListNode node, int K){
+		
+	}
+	
+	/**
+	 * Problem-40 Is it possible to get O(1) access time to linked list
+	 */
+	
+	
+	/** 
+	 */
+	public ListNode getJosephusPosition(int N, int M){
+		
+		return null;
+	}
 }
