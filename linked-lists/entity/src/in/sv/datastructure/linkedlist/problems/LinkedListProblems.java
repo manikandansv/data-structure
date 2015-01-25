@@ -2,7 +2,6 @@ package in.sv.datastructure.linkedlist.problems;
 
 import in.sv.datastructure.linkedlist.ListNode;
 import in.sv.datastructure.linkedlist.crud.SingleLinkedList;
-import in.sv.datastructure.stack.LLStack;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -460,53 +459,80 @@ public class LinkedListProblems {
 
 	/**
 	 * Problem-20 Solve using stack Time Complexity: O(m+n) Space Complexity:
-	 * O(m+n)
+	 * O(m+n).
 	 * 
 	 * @param node1
 	 * @param node2
 	 * @return
 	 */
-	public ListNode getIntersectionNodeMethod3(ListNode node1, ListNode node2) {
-
-		ListNode intersectNode = null;
-
-		LLStack stack1 = new LLStack();
-		LLStack stack2 = new LLStack();
-
-		while (node1 != null) {
-			stack1.push(node1);
-			node1 = node1.getNext();
-		}
-
-		while (node2 != null) {
-			stack2.push(node2);
-			node2 = node2.getNext();
-		}
-
-		while (true) {
-			ListNode node11 = (ListNode) stack1.pop();
-			ListNode node22 = (ListNode) stack2.pop();
-			if (node11.getId() == node22.getId()) {
-				intersectNode = node11;
-			} else {
-				break;
-			}
-		}
-		return intersectNode; 
-	}
+//	public ListNode getIntersectionNodeMethod3(ListNode node1, ListNode node2) {
+//
+//		ListNode intersectNode = null;
+//
+//		LLStack stack1 = new LLStack();
+//		LLStack stack2 = new LLStack();
+//
+//		while (node1 != null) {
+//			stack1.push(node1);
+//			node1 = node1.getNext();
+//		}
+//
+//		while (node2 != null) {
+//			stack2.push(node2);
+//			node2 = node2.getNext();
+//		}
+//
+//		while (true) {
+//			ListNode node11 = (ListNode) stack1.pop();
+//			ListNode node22 = (ListNode) stack2.pop();
+//			if (node11.getId() == node22.getId()) {
+//				intersectNode = node11;
+//			} else {
+//				break;
+//			}
+//		}
+//		return intersectNode;
+//	}
 
 	/**
+	 * Problem-21: Find the first repeating number approach in an array
 	 * 
 	 * @param node1
 	 * @param node2
 	 * @return
 	 */
-	public ListNode getIntersectionNodeMethod4(ListNode node1, ListNode node2){
+	public ListNode getIntersectionNodeMethod4(ListNode node1, ListNode node2) {
+
+		ListNode intersectNode = null;
+
+		return intersectNode;
+
+	}
+	
+	/**
+	 * Problem-22: 
+	 * @param node1
+	 * @param node2
+	 * @return
+	 */
+	public ListNode getIntersectionNodeMethod5(ListNode node1, ListNode node2){
 		
 		ListNode intersectNode = null;
-		
+
 		return intersectNode;
 		
 	}
 	
+	/**
+	 * Problem-23:
+	 * @param node1
+	 * @param node2
+	 * @return
+	 */
+	public ListNode getIntersectionNodeMethod6(ListNode node1, ListNode node2){
+		ListNode intersectNode = null;
+
+		return intersectNode;
+	}
+
 }
