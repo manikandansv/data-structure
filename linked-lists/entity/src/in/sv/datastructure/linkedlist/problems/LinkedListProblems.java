@@ -496,7 +496,12 @@ public class LinkedListProblems {
 	// }
 
 	/**
-	 * Problem-21: Find the first repeating number approach in an array
+	 * Problem-21: Find the first repeating number approach in an array Create
+	 * an array A & keep all next pointers of both the list in the array In the
+	 * array find the first repeating element in the array The first repeating
+	 * number indicates the merging poing of both lists
+	 * 
+	 * Complexity : O(m+n)
 	 * 
 	 * @param node1
 	 * @param node2
@@ -511,11 +516,16 @@ public class LinkedListProblems {
 	}
 
 	/**
-	 * Problem-22:
+	 * Problem-22: Create an array A & keep all next pointers in the array Sort
+	 * these array elements For each of the second list element, search in the
+	 * sorted array => O(log n) considering this search as binary search Since
+	 * we're scanning list one by one, the first repeating element is the merge
+	 * one
 	 * 
 	 * @param node1
 	 * @param node2
-	 * @return
+	 * @return Time Complexity: sorting + searching=>Max(O(m log m), O(n log n))
+	 *         Space Complexity: O(Max(m,n))
 	 */
 	public ListNode getIntersectionNodeMethod5(ListNode node1, ListNode node2) {
 
@@ -528,6 +538,12 @@ public class LinkedListProblems {
 	/**
 	 * Problem-23:
 	 * 
+	 * 1)Find the length of node1, node2 => Max(O(m),O(n)) 2) Different between
+	 * both lengths => O(1) 3) Make d steps => O(d) 4) Move both lists in
+	 * parellel until next node matches Min(O(m),O(n))
+	 * 
+	 * Time COmplexity: O(max(m,n)) Space Complexity: O(1)
+	 * 
 	 * @param node1
 	 * @param node2
 	 * @return
@@ -539,7 +555,8 @@ public class LinkedListProblems {
 	}
 
 	/**
-	 * Problem-24
+	 * Problem-24 1) For each node, find the number of nodes in the list & check
+	 * if it's middle. Time complexity: O(n2) Space Complexity: O(1)
 	 * 
 	 * @param node
 	 * @return
@@ -550,6 +567,8 @@ public class LinkedListProblems {
 	}
 
 	/**
+	 * 1) Find the length of list => O(n) 2) Find the middle & traverse till
+	 * middle => O(n/2) Time complexity: O(n) Space Complexity: O(1)
 	 * 
 	 * @param node
 	 * @return
@@ -560,6 +579,8 @@ public class LinkedListProblems {
 	}
 
 	/**
+	 * 1) Iterate the node & put in hashmap 2) Find the middle & get the node
+	 * from map Time Complexity: O(n) Space Complexity: O(1)
 	 * 
 	 * @param node
 	 * @return
@@ -570,7 +591,9 @@ public class LinkedListProblems {
 	}
 
 	/**
-	 * Problem-27
+	 * Problem-27 1) Use two pointers, the second pointer is twice the speed of
+	 * first 2) by the time second pointer reaches end, the node at which
+	 * pointer1 points is middle node Time Complexity: O(n) Space: O(1)
 	 * 
 	 * @param node
 	 * @return
@@ -581,7 +604,8 @@ public class LinkedListProblems {
 	}
 
 	/**
-	 * Problem-28
+	 * Problem-28 Traverse till last & start printing from last Time Complexity:
+	 * O(n) Space Complexity: O(n)
 	 * 
 	 * @param head
 	 */
@@ -590,7 +614,8 @@ public class LinkedListProblems {
 	}
 
 	/**
-	 * Problem-29
+	 * Problem-29 Implement with any solution to find the middle of linked list
+	 * Time Complexity: O(n) Space Complexity: O(1)
 	 * 
 	 * @param head
 	 * @return
@@ -612,7 +637,7 @@ public class LinkedListProblems {
 	}
 
 	/**
-	 * Problem-31
+	 * Problem-31 Recursive call
 	 * 
 	 * @param node1
 	 * @param node2
@@ -624,7 +649,8 @@ public class LinkedListProblems {
 	}
 
 	/**
-	 * Problem-32
+	 * Problem-32 Get next node in temp. next node of head is next node of temp
+	 * temp next node is head do the above recursively
 	 * 
 	 * @param head
 	 * @return
@@ -658,51 +684,61 @@ public class LinkedListProblems {
 	 * Problem-36 Split a CLL into two equal parts. If the number of nodes are
 	 * odd, then make first list one node extra than the second list
 	 * 
+	 * 1) Using Floyd cycle finding algorithm, get the mid & last pointers 2)
+	 * Make second half sircular 3) Make first half circular 4) Set head of two
+	 * lists Time Complexity: O(n) Space Complexity: O(1)
+	 * 
 	 * @param node
 	 */
 	public void splitCLL(ListNode node) {
 
 	}
-	
+
 	/**
-	 * Problem-37 Check if the list is palindrome
+	 * Problem-37 Check if the list is palindrome 1) Get the middle of list 2)
+	 * Reverse the second half 3) Compare the first & second half
+	 * 
 	 * @param node
 	 * @return
 	 */
-	public boolean isPalindrome(ListNode node){
-		
+	public boolean isPalindrome(ListNode node) {
+
 		return false;
 	}
 
 	/**
 	 * 
 	 * Problem-38 Exchange adjacement elements in link list
+	 * 
 	 * @param node
 	 */
-	public void exchangeAdjacentNodes(ListNode node){
-		
+	public void exchangeAdjacentNodes(ListNode node) {
+
 	}
-	
-	
+
 	/**
 	 * 
 	 * Problem-39 Reverse block of K nodes
+	 * 
 	 * @param node
 	 * @param K
 	 */
-	public void reverseBlockOfKNodes(ListNode node, int K){
-		
+	public void reverseBlockOfKNodes(ListNode node, int K) {
+
 	}
-	
+
 	/**
 	 * Problem-40 Is it possible to get O(1) access time to linked list
 	 */
-	
-	
-	/** 
+
+	/**
+	 * Problem-41 Josephus circle N people have decided to elect a leader by
+	 * arranging themselves in a circle & eliminating every Mth person around
+	 * the circle, closing ranks as each person drop out.Find which person will
+	 * be the last one remaining
 	 */
-	public ListNode getJosephusPosition(int N, int M){
-		
+	public ListNode getJosephusPosition(int N, int M) {
+
 		return null;
 	}
 }
