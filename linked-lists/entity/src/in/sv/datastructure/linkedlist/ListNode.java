@@ -13,6 +13,10 @@ public class ListNode {
 		this.next = null;
 	}
 
+	public ListNode() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public Object getData() {
 		return data;
 	}

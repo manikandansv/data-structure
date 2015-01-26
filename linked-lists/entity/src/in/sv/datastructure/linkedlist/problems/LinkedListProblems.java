@@ -621,6 +621,19 @@ public class LinkedListProblems {
 	 * @return
 	 */
 	public boolean isListEven(ListNode head) {
+		
+		int length = 0;
+		
+		ListNode curNode = head;
+		
+		while (curNode != null){
+			curNode = curNode.getNext();
+			length++;
+		}
+		
+		if (length%2==0){
+			return true;
+		}
 
 		return false;
 	}
@@ -650,7 +663,7 @@ public class LinkedListProblems {
 
 	/**
 	 * Problem-32 Get next node in temp. next node of head is next node of temp
-	 * temp next node is head do the above recursively
+	 * temp next node is head do the above recursively. Refer 38
 	 * 
 	 * @param head
 	 * @return
@@ -703,16 +716,37 @@ public class LinkedListProblems {
 	 */
 	public boolean isPalindrome(ListNode node) {
 
-		return false;
+		ListNode middleNode = getMiddleOfLinkedListMethod3(node);
+
+		ListNode reverseNode = reverseSLL(middleNode.getNext());
+
+		if (node != null && reverseNode != null) {
+			while (node.getNext() != null) {
+				if (!node.getData().equals(reverseNode.getData())) {
+					return false;
+				}
+			}
+		}
+
+		return true;
 	}
 
 	/**
 	 * 
-	 * Problem-38 Exchange adjacement elements in link list
+	 * Problem-38 Exchange adjacement elements in link list Same as 32
 	 * 
 	 * @param node
 	 */
 	public void exchangeAdjacentNodes(ListNode node) {
+
+		ListNode temp;
+
+		if (node != null && node.getNext() != null) {
+			temp = node.getNext();
+			node.setNext(temp.getNext());
+			temp.setNext(node);
+			exchangeAdjacentNodes(node.getNext());
+		}
 
 	}
 
@@ -725,20 +759,60 @@ public class LinkedListProblems {
 	 */
 	public void reverseBlockOfKNodes(ListNode node, int K) {
 
+		ListNode curNode, nextNode, tempNode;
+
+		curNode = node;
+
+		if (hasKNodes(node, K)) {
+			node = getKthNode(K - 1, node);
+			while (curNode != null && hasKNodes(curNode, K)) {
+				tempNode = getKthNode(K, getKthNode(K - 1, curNode));
+				int i = 0;
+				while (i < K) {
+					nextNode = curNode.getNext();
+					curNode.setNext(tempNode);
+					tempNode = curNode;
+					curNode = nextNode;
+					i++;
+				}
+			}
+		}
+	}
+
+	private ListNode getKthNode(int i, ListNode node) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	/**
-	 * Problem-40 Is it possible to get O(1) access time to linked list
+	 * Problem-40 Is it possible to get O(1) access time to linked list - Yes
+	 * Create a linked list along with hashtable.
+	 * 
+	 * @param k
+	 * @param node
 	 */
+
+	private boolean hasKNodes(ListNode node, int k) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 
 	/**
 	 * Problem-41 Josephus circle N people have decided to elect a leader by
 	 * arranging themselves in a circle & eliminating every Mth person around
 	 * the circle, closing ranks as each person drop out.Find which person will
-	 * be the last one remaining
+	 * be the last one remaining. Assume the input is list with N nodes;
 	 */
-	public ListNode getJosephusPosition(int N, int M) {
+	public ListNode getJosephusPosition(ListNode node, int N, int M) {
 
-		return null;
+		ListNode result = node;
+
+		for (int i = N; i > 1; i--) {
+			for (int j = 0; j < M - 1; j++) {
+				result = result.getNext();
+			}
+			result.setNext(result.getNext().getNext());
+		}
+		return result;
 	}
 }
