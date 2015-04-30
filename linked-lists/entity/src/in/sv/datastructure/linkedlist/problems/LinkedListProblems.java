@@ -621,17 +621,17 @@ public class LinkedListProblems {
 	 * @return
 	 */
 	public boolean isListEven(ListNode head) {
-		
+
 		int length = 0;
-		
+
 		ListNode curNode = head;
-		
-		while (curNode != null){
+
+		while (curNode != null) {
 			curNode = curNode.getNext();
 			length++;
 		}
-		
-		if (length%2==0){
+
+		if (length % 2 == 0) {
 			return true;
 		}
 
@@ -658,7 +658,24 @@ public class LinkedListProblems {
 	 */
 	public ListNode mergeSortedList(ListNode node1, ListNode node2) {
 
-		return null;
+		ListNode result = null;
+
+		if (node1 == null) {
+			return node2;
+		}
+		if (node2 == null) {
+			return node1;
+		}
+
+		if (((String) node1.getData()).compareTo((String) node2.getData()) < 0) {
+			result = node1;
+			result.setNext(mergeSortedList(node1.getNext(), node2));
+		} else {
+			result = node2;
+			result.setData(mergeSortedList(node2.getNext(), node1));
+		}
+
+		return result;
 	}
 
 	/**
@@ -704,7 +721,22 @@ public class LinkedListProblems {
 	 * @param node
 	 */
 	public void splitCLL(ListNode node) {
-
+		ListNode head1 = null;
+		ListNode head2 = null;
+		ListNode slowPtr = node;
+		ListNode fastPtr = node;
+		while (fastPtr.getNext() != node && fastPtr.getNext().getNext()!=node){
+			slowPtr = slowPtr.getNext();
+			fastPtr = fastPtr.getNext().getNext();
+		}
+		if (fastPtr.getNext().getNext() == node){
+			fastPtr = fastPtr.getNext();
+		}
+		head1 = node;
+		head2 = slowPtr.getNext();
+		
+		fastPtr.setNext(slowPtr.getNext());
+		slowPtr.setNext(head1);
 	}
 
 	/**
